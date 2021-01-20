@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap');
-
+@import 'hamburger';
 
 $mobile:375px;
 $desktop:1440px;
 $dark-gray:hsl(0, 0%, 55%);
 $very-dark-gray:hsl(0, 0%, 41%);
-$h1:4em;
+$h1:3.75em;
 $h2:2.75em;
+$h3:1.75em;
 
+html{
+    scroll-behavior: smooth;
+}
 ul{
     list-style-type: none;
     margin:0;
@@ -16,6 +20,10 @@ ul{
 }
 a{
     text-decoration: none;
+    color: white;
+    a:visited{
+        color:white;
+    }
 }
 img{
     width:100%;
@@ -43,25 +51,32 @@ body{
     font-size: $h2;
     text-transform: uppercase;
 }
+.nav-menu-tabs{
+    font-family:'Josefin Sans',sans-serif;
+    font-size: $h3;
+    text-transform: uppercase;
+}
 .hero-container{
     background: url('../images/mobile/image-hero.jpg');
     background-size: cover;
     height:120vh;
     background-repeat: no-repeat;
-    padding:4em 1em 1em 2em;
+    padding:4em 1em 1em 1em;
     margin-bottom: 2em;
+    
     nav{
         display:flex;
+        position: relative;
         align-items: center;
         justify-content: space-between;
         padding:0em 0em 10em 0em;
        ul{
            display:none;
        }
-
+       
     }
     .hero{
-    padding:2em 1em 1.5em 1em;
+    padding:2em 1em;
     border: solid white;
     border-width:3px;
     color: white;
@@ -71,6 +86,25 @@ body{
         text-transform: uppercase;
         font-size: $h1;
     }
+    }
+}
+
+.overlay{
+    background: #131313;
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+    display:none;
+    color:white;
+    transition: 0.5 ease-in-out forwards;
+    .mobile-menu{
+        display:flex;
+       padding:8em .5em 0em .5em;
+        ul li{
+            padding-top: 1em;
+        }
     }
 }
 
@@ -96,6 +130,7 @@ body{
 .creations{
    display:grid;
    place-content: center;
+   margin-bottom: 2em;
    .creation-container{
        display: flex;
        justify-content: space-between;
@@ -168,7 +203,7 @@ body{
         }
        }
        .see-all{
-           padding:1em 2em;
+           padding:1em 3.5em;
            background: white;
            border: black solid;
            font-family: 'Alata',sans-serif;
@@ -176,7 +211,35 @@ body{
            letter-spacing: 7px;
            font-weight: 400;
            cursor: pointer;
-           max-width: 200px;
+           max-width: 300px;
        }
+   }
+}
+
+footer{
+    background: #131313;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:4em;
+   .links li{
+       display: flex;
+       justify-content: center;
+       padding:2em 0em .5em 0em;
+   }
+   p{
+       text-align: center;
+       margin-top: .5em;
+   }
+
+   .social-container{
+       padding:1em;
+       display: flex;
+       align-items: center;
+    a{
+        padding:4em .75em 0em;
+    }
    }
 }
