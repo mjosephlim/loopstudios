@@ -1,0 +1,78 @@
+@media only screen and(min-width:$desktop){
+    
+    .hero-container{
+        
+        .hero-image{
+            background: url('../images/desktop/image-hero.jpg'),purple;
+            background-size: cover;
+            height:120vh;
+            background-repeat: no-repeat;
+            padding:4em 1em 1em 1em;   
+            margin-bottom: 2em;
+            transition: opacity .2s ease-out;
+           
+        }
+        
+        .hero-image:hover{
+            transition: opacity .2s ease-in;
+            animation: aberration 3s  ease-in-out infinite;
+        }
+        header{
+            padding:2em 4em;
+        }
+        #nav{
+            #hamburger-1{display:none;}
+            ul.web-nav{
+                display:flex;
+            }
+        }
+        .content{
+            padding:0em 4.5em;
+            display: grid;
+            grid-template-columns: 50% auto;
+            .hero{
+               padding:1em 2em;
+               font-size: 1.5em;
+               line-height: 1.075;
+            }
+        }
+        
+    }
+    @keyframes aberration {
+        0%{
+            background-color: yellowgreen;
+            background-blend-mode: multiply;
+            opacity:1;
+           
+        }
+
+        25%{
+            background-color: purple;
+            background-blend-mode: multiply;
+            opacity:1;
+           
+        }
+
+        50%{
+            background-color: crimson;
+            background-blend-mode: multiply;
+            opacity:1;
+           
+        }
+
+        75%{
+            background-color: indigo;
+            background-blend-mode: multiply;
+            opacity:1;
+           
+        }
+
+        100%{
+            background-color: yellowgreen;
+            background-blend-mode: multiply;
+            opacity: 1;
+           
+        }
+        
+    }
+    }
