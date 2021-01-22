@@ -1,61 +1,10 @@
+@import 'variables';
+@import 'globals';
+@import 'hamburger';
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap');
-@import 'hamburger';
-
-$mobile:375px;
-$desktop:1440px;
-$dark-gray:hsl(0, 0%, 55%);
-$very-dark-gray:hsl(0, 0%, 41%);
-$h1:3.75em;
-$h2:2.75em;
-$h3:1.75em;
-
-html{
-    scroll-behavior: smooth;
-}
-ul{
-    list-style-type: none;
-    margin:0;
-    padding:0;
-}
-a{
-    text-decoration: none;
-    color: white;
-    a:visited{
-        color:white;
-    }
-}
-img{
-    width:100%;
-}
-
-*{
-    padding:0px;
-    margin:0px;
-    box-sizing: border-box;
-}
 
 
-body{
-    height:100vh;
-    font-family: 'Alata', sans-serif;
-    font-size: 0.94em;
-}
-
-.text-center{
-    text-align: center;
-}
-.section-title{
-    font-family: 'Josefin Sans',sans-serif;
-    font-weight: 300;
-    font-size: $h2;
-    text-transform: uppercase;
-}
-.nav-menu-tabs{
-    font-family:'Josefin Sans',sans-serif;
-    font-size: $h3;
-    text-transform: uppercase;
-}
 .hero-container{
     background: url('../images/mobile/image-hero.jpg');
     background-size: cover;
@@ -64,30 +13,68 @@ body{
     padding:4em 1em 1em 1em;
     margin-bottom: 2em;
     
-    nav{
+    #nav{
         display:flex;
         position: relative;
         align-items: center;
         justify-content: space-between;
         padding:0em 0em 10em 0em;
-       ul{
+       ul.web-nav{
            display:none;
+           li{
+               padding:0em 1em;
+              
+            
+            a, .hvr-underline{
+                padding-bottom: 10px;
+                background-image: linear-gradient(white, white);
+                background-size: 0 5px, auto;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                transition: all .5s ease-in-out;
+            }
+           }
+           .hvr-underline:hover{
+            /* The following line makes the underline only as wide as the text */
+                /* background-size: calc(100% - 2em) 5px, auto; */
+                background-size: 100% 5px, auto;
+           }
+       }
+
+       .logo{
+           transition: all .5s ease-in-out;
+       }
+       .logo:hover{
+           transform:scale(1.1);
        }
        
     }
+
     .hero{
     padding:2em 1em;
     border: solid white;
-    border-width:3px;
+    border-width:1px;
     color: white;
-    font-family: 'Josefin Sans',sans-serif;
+    background: linear-gradient(90deg, rgba(240, 145, 21, 0.5) 0%, rgba(121,9,99,0.4511554621848739) 100%);
+    background-size: 0 100%, auto;
+    background-repeat: no-repeat;
+    background-position: left;    
+    transition: all .5s ease-in-out;
+    cursor: default;
+    font-family: 'Alata',sans-serif;
     h1{
         font-weight: 300;
         text-transform: uppercase;
         font-size: $h1;
     }
+    
+    }
+    .hero:hover{
+       background-size: 100% 100%,auto;
+       
     }
 }
+
 
 .overlay{
     background: #131313;
@@ -242,4 +229,31 @@ footer{
         padding:4em .75em 0em;
     }
    }
+}
+
+@media only screen and(min-width:$desktop){
+.hero-container{
+    background: url('../images/desktop/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top:0px;
+    width:100%;
+    height: 100%;
+    padding:3em 7em;
+    #nav{
+        #hamburger-1{display:none;}
+        ul.web-nav{
+            display:flex;
+        }
+    }
+    .content{
+        display: grid;
+        grid-template-columns: 50% auto;
+        .hero{
+           padding:1em 2em;
+           font-size: 1.5em;
+           line-height: 1.075;
+        }
+    }
+}
 }

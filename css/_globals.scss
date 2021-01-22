@@ -1,0 +1,46 @@
+html{
+    scroll-behavior: smooth;
+}
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+    color: white;
+    a:visited{
+        color:white;
+    }
+}
+img{
+    width:100%;
+}
+
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    height:100vh;
+    font-family: 'Alata', sans-serif;
+    font-size: 0.94em;
+}
+
+.text-center{
+    text-align: center;
+}
+.section-title{
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 300;
+    font-size: $h2;
+    text-transform: uppercase;
+}
+.nav-menu-tabs{
+    font-family:'Josefin Sans',sans-serif;
+    font-size: $h3;
+    text-transform: uppercase;
+}
