@@ -29,7 +29,7 @@
         .content{
             padding:0em 4.5em;
             display: grid;
-            grid-template-columns: 50% auto;
+            grid-template-columns: 60% auto;
             .hero{
                padding:1em 2em;
                font-size: 1.5em;
@@ -38,6 +38,134 @@
         }
         
     }
+
+    .about{
+        display: grid;
+        padding:1em 9em;
+        .section-container{
+            display: inherit;
+            grid-template-columns: 50% 1fr;
+            position: relative;
+            .img-container{
+                display: inherit;
+                grid-column: 1;
+                grid-row: 1;
+                grid-row-start: 1;
+                grid-row-end: 12;
+                z-index: 0;
+                
+                img{
+                    content:url("../images/desktop/image-interactive.jpg");
+                }
+            }
+            .about-desc{
+            display: inherit;
+            grid-column: -1;
+            grid-row: 1;
+            grid-area: 6/2/15/-1;
+            margin-left: -50px;
+            z-index: 1;
+            
+            }
+        }
+    }
+
+    .creations{
+        display: inline-block;
+        padding:2em 2em;
+        .section-header{
+            display: flex;
+           justify-content: space-between;
+           padding:0em 4em;
+        }
+        
+        .creation-container{
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 4em 3em;
+        .creation-item{
+            flex:25%;
+            position: relative;
+            padding:.5em 0em;
+            
+           .title-holder{
+               position: absolute;
+               bottom: 8px;
+               left: 16px;
+               padding:1em 1em;
+               display: grid;
+               grid-template-columns: 55% auto;
+               p{
+                   color:white;
+               }
+           }
+           
+            img{
+            max-width: 90vw;
+            
+                &.earth{
+                    content:url('/images/desktop/image-deep-earth.jpg');
+                }
+                
+                &.curiosity{
+                    content:url('/images/desktop/image-curiosity.jpg');
+                }
+                &.fisheye{
+                    content:url('/images/desktop/image-fisheye.jpg');
+                }
+                &.above{
+                    content:url('/images/desktop/image-from-above.jpg');
+                }
+                &.the-grid{
+                    content:url('/images/desktop/image-grid.jpg');
+                }
+                &.arcade{
+                    content:url('/images/desktop/image-night-arcade.jpg');
+                }
+                &.borealis{
+                    content:url('/images/desktop/image-pocket-borealis.jpg');
+                }
+                &.soccer{
+                    content:url('/images/desktop/image-soccer-team.jpg');
+                }
+                
+                
+            }
+            
+        }
+        }
+    }
+    
+    .img-gradient{
+        position:relative;
+        display:inline-block;
+      }
+      .img-gradient:after {
+        content:'';
+        position:absolute;
+        left:0; top:0;
+        width:100%; height:99%;
+        display:inline-block;
+        background: linear-gradient(0deg, rgba(0,0,0,0.8377100840336135) 8%, rgba(255,0,0,0) 48%);
+      }      
+    
+
+      .see-all{
+        padding:1em 3.5em;
+        background: white;
+        border: black solid;
+        font-family: 'Alata',sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+        font-weight: 400;
+        cursor: pointer;
+        max-width: 300px;
+            &.web{
+                display: initial;
+            }
+            &.mobile{display: none;}
+        }
     @keyframes aberration {
         0%{
             background-color: yellowgreen;
