@@ -6,6 +6,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&display=swap');
 
+a, .hvr-underline{
+    padding-bottom: 10px;
+    background-image: linear-gradient(white, white);
+    background-size: 0 5px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .5s ease-in-out;
+}
+
+.hvr-underline:hover{
+/* The following line makes the underline only as wide as the text */
+    /* background-size: calc(100% - 2em) 5px, auto; */
+    background-size: 100% 5px, auto;
+}
 
 .hero-container{
     .hero-image{
@@ -33,19 +47,6 @@
                padding:0em 1em;
               
             
-            a, .hvr-underline{
-                padding-bottom: 10px;
-                background-image: linear-gradient(white, white);
-                background-size: 0 5px, auto;
-                background-repeat: no-repeat;
-                background-position: center bottom;
-                transition: all .5s ease-in-out;
-            }
-           }
-           .hvr-underline:hover{
-            /* The following line makes the underline only as wide as the text */
-                /* background-size: calc(100% - 2em) 5px, auto; */
-                background-size: 100% 5px, auto;
            }
        }
 
@@ -236,25 +237,32 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding:4em;
-   .links li{
-       display: flex;
-       justify-content: center;
-       padding:2em 0em .5em 0em;
-   }
-   p{
-       text-align: center;
-       margin-top: .5em;
-   }
-
-   .social-container{
-       padding:1em;
-       display: flex;
-       align-items: center;
-    a{
-        padding:4em .75em 0em;
+    text-align: center;
+    .logo{
+        width:192px;
+        padding: 1em;
     }
+    .social-icons{
+        width:2em;
+    }
+    .links li{
+        padding:1em;
+    }
+    a{
+        padding:1em;
+    }
+    p{
+        padding:1em;
+    }
+    
+   
+    
    }
-}
+   
+
+   
+    
+   
+
 
 @import 'queries';
