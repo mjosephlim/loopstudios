@@ -740,6 +740,12 @@ footer p {
   .about .about-desc h2 {
     font-size: 1.5em;
   }
+  .creations .img-gradient:after {
+    height: 96%;
+  }
+  .creations .creation-item {
+    padding-bottom: 1em;
+  }
   .creations h2 {
     font-size: 1.5em;
   }

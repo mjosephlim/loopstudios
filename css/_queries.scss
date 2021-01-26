@@ -266,6 +266,13 @@
     }
 
     .creations{
+        .img-gradient:after {
+        height:96%;
+        }
+
+        .creation-item{
+            padding-bottom: 1em;
+        }
         h2{
             font-size: 1.5em;
         }
