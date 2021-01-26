@@ -705,4 +705,43 @@ footer p {
     }
   }
 }
+
+@media only screen and (max-width: 370px) {
+  .hero-container .hero-image {
+    background: url("../images/mobile/image-hero.jpg"), purple;
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    padding: 4em 1em 1em 1em;
+    margin-bottom: 1em;
+    -webkit-transition: opacity .2s ease-out;
+    transition: opacity .2s ease-out;
+  }
+  .hero-container .hero-image .content {
+    padding: 0em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100% auto;
+        grid-template-columns: 100% auto;
+    place-content: center;
+  }
+  .hero-container .hero-image .content .hero {
+    padding: 1em 2em;
+    font-size: .6em;
+  }
+  .about {
+    padding: 0em 0em;
+    margin: 0em 0em;
+  }
+  .about .about-desc {
+    padding: 0em;
+    margin: 0em;
+  }
+  .about .about-desc h2 {
+    font-size: 1.5em;
+  }
+  .creations h2 {
+    font-size: 1.5em;
+  }
+}
 /*# sourceMappingURL=main.css.map */
